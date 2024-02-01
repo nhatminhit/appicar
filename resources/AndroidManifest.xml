@@ -45,7 +45,7 @@
     <uses-feature android:name="android.hardware.wifi" android:required="false"/>
     <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="vn.icar.entertaiment.app.App" android:exported="true" android:allowBackup="true" android:hardwareAccelerated="true" android:supportsRtl="true" android:extractNativeLibs="false" android:usesCleartextTraffic="true" android:resizeableActivity="true" android:directBootAware="true" android:roundIcon="@mipmap/ic_launcher_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:requestLegacyExternalStorage="true">
         <activity android:theme="@style/AppTheme" android:name="vn.icar.entertaiment.view.activity.LogoActivity" android:exported="true" android:screenOrientation="sensorLandscape"/>
-        <activity android:theme="@style/AppTheme" android:name="vn.icar.entertaiment.view.activity.LoginActivity" android:screenOrientation="sensorLandscape"/>
+<!--        <activity android:theme="@style/AppTheme" android:name="vn.icar.entertaiment.view.activity.LoginActivity" android:screenOrientation="sensorLandscape"/>-->
         <receiver android:label="Giải trí" android:name="vn.icar.entertaiment.view.widget.EntertainmentWidget" android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>

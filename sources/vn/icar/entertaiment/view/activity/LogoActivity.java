@@ -105,7 +105,7 @@ public class LogoActivity extends BaseActivity<zi.c> implements ErrorDialog.a, f
             return;
         }
         d.c(f23822v0, "Migrate token không thành công, chuyển sang đăng nhập");
-        startActivity(new Intent(this, LoginActivity.class));
+        startActivity(new Intent(this, HomeActivity.class));
         finish();
     }
 
@@ -223,7 +223,7 @@ public class LogoActivity extends BaseActivity<zi.c> implements ErrorDialog.a, f
                 new ri.h(this).a(new ri.a(i.r(this.f17785k0).c0(), i.r(this.f17785k0).c(), ni.b.f21291e, i.r(this.f17785k0).D(), "fcm"), this.f17785k0);
             } else {
                 d.c(f23822v0, "Có mạng , không có dữ liệu token, chuyển sang màn home");
-                startActivity(new Intent(this, LoginActivity.class));
+                startActivity(new Intent(this, HomeActivity.class));
                 finish();
             }
         } else if (yc.a.c(this.f23827u0.q()) - uc.a.a() < 21600) {
@@ -254,7 +254,7 @@ public class LogoActivity extends BaseActivity<zi.c> implements ErrorDialog.a, f
                 this.f23827u0.B(i.r(this.f17785k0).a());
             } else {
                 d.c(f23822v0, "Không có mạng và ko có dữ liệu token, chuyển sang màn login");
-                startActivity(new Intent(this, LoginActivity.class));
+                startActivity(new Intent(this, HomeActivity.class));
                 finish();
                 return;
             }
