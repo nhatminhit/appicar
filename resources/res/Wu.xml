@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/size10dp" android:layout_marginBottom="@dimen/size10dp" android:layout_marginVertical="@dimen/size10dp">
+        <ImageView android:id="@+id/img_device" android:layout_width="@dimen/size60dp" android:layout_height="@dimen/size30dp" android:src="@drawable/ic_device" android:layout_centerVertical="true"/>
+        <TextView android:textSize="@dimen/size13dp" android:textColor="#000000" android:id="@+id/txt_device" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/size15dp" android:text="Ownice C970" android:layout_toRightOf="@+id/img_device" android:layout_centerVertical="true" android:fontFamily="@font/svn_poppins_medium"/>
+        <TextView android:textSize="@dimen/size13dp" android:textColor="#ffffff" android:id="@+id/bt_device" android:background="@drawable/bg_bt_login" android:paddingLeft="@dimen/size22dp" android:paddingTop="@dimen/size11dp" android:paddingRight="@dimen/size22dp" android:paddingBottom="@dimen/size11dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/logout" android:includeFontPadding="false" android:layout_alignParentRight="true" android:fontFamily="@font/svn_poppins_semibold" android:paddingHorizontal="@dimen/size22dp" android:paddingVertical="@dimen/size11dp"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/tab_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView android:id="@+id/card_channel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/size5dp" android:layout_marginBottom="@dimen/size5dp" android:elevation="@dimen/size1dp" android:layout_marginVertical="@dimen/size5dp" app:cardCornerRadius="@dimen/size18dp">
+        <ImageView android:id="@+id/img_channel" android:layout_width="@dimen/size34dp" android:layout_height="@dimen/size34dp"/>
+    </androidx.cardview.widget.CardView>
+    <TextView android:textSize="@dimen/size15dp" android:textColor="#1f2225" android:ellipsize="end" android:id="@+id/txt_channel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/size10dp" android:layout_marginRight="@dimen/size10dp" android:text="VTVcab Tin tức" android:maxLines="1" android:layout_toLeftOf="@+id/tg_channel" android:layout_toRightOf="@+id/card_channel" android:layout_centerVertical="true" android:fontFamily="@font/svn_poppins_regular"/>
+    <ImageView android:id="@+id/tg_channel" android:layout_width="@dimen/size42dp" android:layout_height="@dimen/size22dp" android:src="@drawable/ic_tg_off" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+</RelativeLayout>

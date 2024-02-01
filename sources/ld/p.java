@@ -1,0 +1,65 @@
+package ld;
+
+import fh.g;
+
+public enum p {
+    SUCCESS(0),
+    INVALID_HANDLE(1),
+    READ_NOT_PERMITTED(2),
+    WRITE_NOT_PERMITTED(3),
+    INVALID_PDU(4),
+    INSUFFICIENT_AUTHENTICATION(5),
+    REQUEST_NOT_SUPPORTED(6),
+    INVALID_OFFSET(7),
+    INSUFFICIENT_AUTHORIZATION(8),
+    PREPARE_QUEUE_FULL(9),
+    ATTRIBUTE_NOT_FOUND(10),
+    ATTRIBUTE_NOT_LONG(11),
+    INSUFFICIENT_ENCRYPTION_KEY_SIZE(12),
+    INVALID_ATTRIBUTE_VALUE_LENGTH(13),
+    UNLIKELY_ERROR(14),
+    INSUFFICIENT_ENCRYPTION(15),
+    UNSUPPORTED_GROUP_TYPE(16),
+    INSUFFICIENT_RESOURCES(17),
+    DATABASE_OUT_OF_SYNC(18),
+    VALUE_NOT_ALLOWED(19),
+    NO_RESOURCES(128),
+    INTERNAL_ERROR(129),
+    WRONG_STATE(130),
+    DB_FULL(131),
+    BUSY(132),
+    ERROR(133),
+    CMD_STARTED(134),
+    ILLEGAL_PARAMETER(135),
+    PENDING(136),
+    AUTHORIZATION_FAILED(137),
+    MORE(138),
+    INVALID_CFG(139),
+    SERVICE_STARTED(140),
+    ENCRYPTED_NO_MITM(141),
+    NOT_ENCRYPTED(142),
+    CONNECTION_CONGESTED(143),
+    CCCD_CFG_ERROR(253),
+    PROCEDURE_IN_PROGRESS(254),
+    VALUE_OUT_OF_RANGE(255),
+    CONNECTION_CANCELLED(256),
+    FAILURE_REGISTERING_CLIENT(257),
+    UNKNOWN_STATUS_CODE(65535);
+    
+    public final int O;
+
+    /* access modifiers changed from: public */
+    p(int i10) {
+        this.O = i10;
+    }
+
+    @g
+    public static p a(int i10) {
+        for (p pVar : values()) {
+            if (pVar.O == i10) {
+                return pVar;
+            }
+        }
+        return UNKNOWN_STATUS_CODE;
+    }
+}

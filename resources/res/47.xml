@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:id="@+id/loadNew" android:title="English"/>
+    <item android:id="@+id/introduce" android:title="Tiếng Việt"/>
+    <item android:id="@+id/setting" android:title="Khmer"/>
+</menu>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:layout_gravity="center" android:tag="layout/dialog_report_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.tatv.baseapp.view.tview.rounded.RoundedRelativeLayout android:id="@+id/root_layout" android:background="#03a9f4" android:layout_width="@dimen/size560dp" android:layout_height="wrap_content" app:cornerRadiusValue="@dimen/size20dp">
+        <LinearLayout android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:paddingLeft="@dimen/size24dp" android:paddingRight="@dimen/size24dp" android:layout_width="match_parent" android:layout_height="@dimen/size300dp" android:layout_marginTop="@dimen/size22dp" android:paddingHorizontal="@dimen/size24dp">
+                <ProgressBar android:layout_width="@dimen/size100dp" android:layout_height="@dimen/size100dp" android:indeterminate="true" android:indeterminateTint="@color/orange"/>
+                <TextView android:textSize="@dimen/size18sp" android:textColor="#4f4f4f" android:id="@+id/txt_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/size20dp" android:text="@string/text_compressing_data" android:fontFamily="@font/roboto_bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.tatv.baseapp.view.tview.rounded.RoundedRelativeLayout>
+</RelativeLayout>

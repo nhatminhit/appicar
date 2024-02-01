@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MainServer9832" default="delay">
+    <import file="res\raw\conf_platform.xml" optional="true"/>
+    <!-- ADT位置 -->
+	<property name="sdk.dir" value="F:\\DevelopTools\\AndroidSdk"/>
+	<!-- keystore位置 -->
+	<property name="key.store" value="F:\\DevelopTools\\libs\\release.keystore"/>
+	<!-- TARGET版本 -->
+	<property name="target" value="android-16"/>
+	<tstamp>
+        <format property="current-val" pattern="yyMMddHHmm"/>
+	    <format property="current-time" pattern="yyyy-MM-dd HH:mm:ss" locale="zh"/>
+	</tstamp>
+	<!-- 应用版本名称,版本号,客户名,用户ID,平台 -->
+    <!-- 生成的应用名称 -->
+	<property name="app-name" value="Server"/>
+	<property name="ver-name" value="1.0"/>
+	<property name="ver-code" value="${current-val}"/>
+	<property name="client-name" value="SG"/>
+	<property name="ui-id" value="1"/>
+	<property name="platform-name" value="6025"/>
+	<!-- java虚拟机位置 -->
+	<property name="java-exe" value="java"/>
+	<!-- singnarl.jar位置,xmltast.jar位置 -->
+	<property name="jar-dir" value="D:\Apk"/>
+	<!-- 签名文件位置 -->
+	<property name="pk-dir" value="D:\Apk\pk\sg9832"/>
+	<!-- 应用生成位置 -->
+	<property name="apk-out-dir" value="E:\apk"/>
+	
+	<property name="key.store.password" value="mimami"/>
+	<property name="key.alias" value="release.keystore"/>
+	<property name="key.alias.password" value="mimami"/>
+    <property file="ant.properties" />
+
+    <property environment="env" />
+    <condition property="sdk.dir" value="${env.ANDROID_HOME}">
+        <isset property="env.ANDROID_HOME" />
+    </condition>
+
+    <loadproperties srcFile="project.properties" />
+
+    <fail
+        message="sdk.dir is missing. Make sure to generate local.properties using 'android update project' or to inject it through the ANDROID_HOME environment variable."
+        unless="sdk.dir"
+    />
+	
+	<property name="manifest-file" value="AndroidManifest.xml"/>
+	<property name="temp-apk" value="temp.apk"/>
+	<property name="singnal-dir" value="F:\DevelopTools\libs\cs9832"/>
+	<property name="signapk-jar" value="${singnal-dir}\signapk.jar"/>
+	<property name="platform-x509" value="${singnal-dir}\platform.x509.pem"/>
+	<property name="platform-pk8" value="${singnal-dir}\platform.pk8"/>
+	<property name="final-apk" value="${apkid}.apk"/>
+	<!-- 
+	<property name="final-apk" value="${client-name}-${ui-id}-${platform-name}-${app-name}-V${ver-name}.apk"/>
+	 -->
+	
+	<!-- 更新软件本地信息 -->
+	<taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask" classpath="F:\DevelopTools\libs\ant-task\xmltask.jar"/> 
+	
+	<target name="delay" depends="sign-apk">
+	    <delete file="${apk-out-dir}/${temp-apk}" />
+	</target>
+	
+	<target name="sign-apk" depends="check-apk" if="file.exist">
+	    	<exec executable="${java-exe}">
+			<arg value="-jar" />
+			<arg value="${signapk-jar}" />
+			<arg value="${platform-x509}" />
+			<arg value="${platform-pk8}" />
+			<arg value="${apk-out-dir}/${temp-apk}" />
+			<arg value="${apk-out-dir}/${final-apk}" />
+			</exec>
+	</target>
+	
+	<target name="check-apk" depends="auto-release">
+    	<available property="file.exist" file="${temp-apk}" filepath="${apk-out-dir}" type= "file"/>
+	</target>
+	
+	<target name="auto-release">
+	<echo>Base path ${basedir}/${manifest-file} current time ${current-time}</echo>
+    <xmltask source="${basedir}/${manifest-file}" dest="${basedir}/${manifest-file}" encoding="utf-8" >  
+        <attr path="//manifest" attr="android:versionName" value="${ver-name}" />  
+        <attr path="//manifest" attr="android:versionCode" value="${ver-code}" />  
+        <attr path="//manifest/application/meta-data[@android:name='client']" attr="android:value" value="${client-name}" />  
+        <attr path="//manifest/application/meta-data[@android:name='ui_id']" attr="android:value" value="${ui-id}" />  
+        <attr path="//manifest/application/meta-data[@android:name='platforms']" attr="android:value" value="${platform-name}" />  
+        <attr path="//manifest/application/meta-data[@android:name='compile']" attr="android:value" value="${current-time}/${apkid}" />  
+    </xmltask>  
+    	<property
+            name="out.final.file"
+            location="${apk-out-dir}/${temp-apk}" />
+        <antcall target="-pre-clean" />
+        <antcall target="release" />
+	</target>
+    <import file="${sdk.dir}/tools/ant/build.xml"/>
+</project>
+

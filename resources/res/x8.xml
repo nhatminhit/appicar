@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/tab_background" android:layout_width="match_parent" android:layout_height="@dimen/size50dp">
+    <TextView android:textSize="@dimen/size15dp" android:textColor="#ffffff" android:ellipsize="end" android:id="@+id/txt_news" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/size26dp" android:layout_marginRight="@dimen/size26dp" android:text="Vòng loại worldcup 2022 tối 07/06: Việt Nam 4 - 0 Indonesia " android:maxLines="2" android:layout_centerVertical="true" android:fontFamily="@font/svn_poppins_semibold" android:layout_marginHorizontal="@dimen/size26dp"/>
+</RelativeLayout>

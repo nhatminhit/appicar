@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/viewIteamTab" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/size15sp" android:textColor="#ffffff" android:id="@+id/txtTabName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/size20dp" android:layout_marginTop="@dimen/size3dp" android:layout_marginBottom="@dimen/size3dp" android:text="Radio online" android:fontFamily="@font/svn_poppins_medium" android:layout_marginVertical="@dimen/size3dp"/>
+</RelativeLayout>

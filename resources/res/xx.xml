@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/root_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_background" android:background="@drawable/bg_widget_s503" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/size14dp" android:layout_marginBottom="@dimen/size14dp" android:layout_marginVertical="@dimen/size14dp"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="0dp" android:layout_alignTop="@+id/img_background" android:layout_alignBottom="@+id/img_background" android:layout_alignStart="@+id/img_background" android:layout_alignEnd="@+id/img_background">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="3"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/layout_main" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/size24dp" android:paddingEnd="@dimen/size28dp">
+            <ImageView android:layout_gravity="center" android:id="@+id/img_thumbnail" android:layout_width="@dimen/size92dp" android:layout_height="@dimen/size92dp" android:src="@drawable/ic_img_s503"/>
+            <RelativeLayout android:id="@+id/layout_space1" android:layout_width="@dimen/size20dp" android:layout_height="match_parent"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/size18dp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/txt_title" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/text_no_media" android:maxLines="1" android:layout_weight="1" android:fontFamily="@font/svn_poppins_medium"/>
+                    <RelativeLayout android:id="@+id/layout_space2" android:layout_width="@dimen/size10dp" android:layout_height="match_parent"/>
+                    <ImageView android:layout_width="@dimen/size28dp" android:layout_height="@dimen/size28dp" android:src="@drawable/ic_music_s5"/>
+                </LinearLayout>
+                <TextView android:textSize="@dimen/size12dp" android:textColor="#dfdfdf" android:ellipsize="end" android:id="@+id/txt_channel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/size3dp" android:text="@string/text_no_media" android:maxLines="1" android:fontFamily="@font/inter_regular"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@+id/btn_prev" android:padding="@dimen/size1dp" android:layout_width="@dimen/size44dp" android:layout_height="@dimen/size44dp" android:src="@drawable/ic_pre_s5"/>
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+                    <ImageView android:id="@+id/btn_play" android:padding="@dimen/size5dp" android:layout_width="@dimen/size44dp" android:layout_height="@dimen/size44dp" android:src="@drawable/ic_pause_s503"/>
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+                    <ImageView android:id="@+id/btn_next" android:padding="@dimen/size1dp" android:layout_width="@dimen/size44dp" android:layout_height="@dimen/size44dp" android:src="@drawable/ic_next_s5"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="3"/>
+    </LinearLayout>
+</RelativeLayout>

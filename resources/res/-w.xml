@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:layout_gravity="center" android:id="@+id/root_layout" android:tag="layout/dialog_permission_0" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <eightbitlab.com.blurview.BlurView android:id="@+id/blur_layout" android:background="@drawable/background_permission_dialog" android:layout_width="@dimen/size520dp" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/size40dp" android:paddingTop="@dimen/size32dp" android:paddingRight="@dimen/size40dp" android:paddingBottom="@dimen/size32dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/size40dp" android:paddingVertical="@dimen/size32dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <TextView android:textSize="@dimen/size18dp" android:textColor="@color/white" android:id="@+id/txt_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:fontFamily="@font/inter_bold"/>
+            <TextView android:textSize="@dimen/size16dp" android:textColor="@color/white" android:id="@+id/txt_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/size16dp" android:text="" android:fontFamily="@font/inter_regular"/>
+            <TextView android:textSize="@dimen/size16dp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="end" android:id="@+id/btn_confirm" android:background="@drawable/confirm_button_selector" android:layout_width="@dimen/size170dp" android:layout_height="@dimen/size44dp" android:layout_marginTop="@dimen/size32dp" android:text="@string/text_grant_permission" android:fontFamily="@font/inter_bold"/>
+        </LinearLayout>
+    </eightbitlab.com.blurview.BlurView>
+</RelativeLayout>

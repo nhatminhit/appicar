@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/size15dp" android:textColor="#4f4f4f" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/txt_device" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/size12dp" android:layout_marginTop="@dimen/size6dp" android:layout_marginRight="@dimen/size12dp" android:layout_marginBottom="@dimen/size6dp" android:maxLines="1" android:layout_marginHorizontal="@dimen/size12dp" android:layout_marginVertical="@dimen/size6dp"/>
+</LinearLayout>

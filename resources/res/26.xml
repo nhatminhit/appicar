@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/tab_background" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/size18dp" android:textColor="#1f2225" android:id="@+id/txt_name_device" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/size10dp" android:layout_marginTop="@dimen/size8dp" android:text="@string/youtube" android:fontFamily="@font/svn_poppins_regular"/>
+    <View android:background="#80434343" android:layout_width="match_parent" android:layout_height="@dimen/size1dp" android:layout_below="@+id/txt_name_device"/>
+</RelativeLayout>

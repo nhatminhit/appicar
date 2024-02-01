@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:layout_gravity="center" android:layout_width="@dimen/size400dp" android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView android:background="#00000000" android:layout_width="wrap_content" android:layout_height="wrap_content" app:cardCornerRadius="@dimen/size20dp">
+        <RelativeLayout android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="@dimen/size180dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/size40dp" android:paddingEnd="@dimen/size40dp">
+                <TextView android:textSize="@dimen/size20dp" android:textColor="#4f4f4f" android:layout_gravity="center" android:id="@+id/txt_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/size22dp" android:text="@string/downloading"/>
+                <ProgressBar android:layout_gravity="center" android:layout_width="@dimen/size42dp" android:layout_height="@dimen/size42dp" android:layout_marginTop="@dimen/size20dp" android:indeterminateDrawable="@drawable/progressbar_color"/>
+                <ProgressBar android:layout_gravity="bottom" android:id="@+id/progress_bar" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="@dimen/size8dp" android:layout_marginTop="@dimen/size22dp" android:layout_marginBottom="@dimen/size22dp" android:max="100" android:progress="0" android:indeterminate="false" android:progressDrawable="@drawable/bg_processbar" android:minWidth="@dimen/size200dp" android:minHeight="@dimen/size50dp" style="?android:attr/progressBarStyleHorizontal"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

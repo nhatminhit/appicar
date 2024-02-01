@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:layout_gravity="center" android:tag="layout/dialog_confirm_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.tatv.baseapp.view.tview.rounded.RoundedRelativeLayout android:id="@+id/root_layout" android:background="#03a9f4" android:layout_width="@dimen/size560dp" android:layout_height="wrap_content" app:cornerRadiusValue="@dimen/size20dp">
+        <LinearLayout android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/size24dp" android:paddingRight="@dimen/size24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/size22dp" android:paddingHorizontal="@dimen/size24dp">
+                <TextView android:textSize="@dimen/size16sp" android:textColor="#4f4f4f" android:id="@+id/txt_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thông báo" android:fontFamily="@font/roboto_bold"/>
+                <TextView android:textSize="@dimen/size14sp" android:textColor="#a1a1a1" android:id="@+id/txtContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/size10dp" android:layout_marginBottom="@dimen/size28dp" android:text="Nội dung" android:maxLines="2" android:fontFamily="@font/roboto_regular"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/layout_action" android:background="#ff5722" android:layout_width="match_parent" android:layout_height="@dimen/size60dp">
+                <TextView android:textSize="@dimen/size14sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/txt_confirm" android:layout_width="0dp" android:layout_height="match_parent" android:text="Đồng ý" android:layout_weight="1" android:fontFamily="@font/roboto_regular"/>
+                <View android:layout_gravity="center_vertical" android:background="@color/white" android:layout_width="@dimen/size1dp" android:layout_height="@dimen/size30dp"/>
+                <TextView android:textSize="@dimen/size14sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/txt_cancel" android:layout_width="0dp" android:layout_height="match_parent" android:text="Hủy bỏ" android:layout_weight="1" android:fontFamily="@font/roboto_regular"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.tatv.baseapp.view.tview.rounded.RoundedRelativeLayout>
+</RelativeLayout>

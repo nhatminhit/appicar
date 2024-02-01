@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:gravity="left|right|center_vertical|center_horizontal|fill_horizontal|center" android:id="@android:id/background">
+        <shape android:tint="#553232" android:shape="rectangle">
+            <corners android:radius="@dimen/size1dp"/>
+            <size android:height="@dimen/size4dp"/>
+            <solid android:color="#553232"/>
+        </shape>
+    </item>
+    <item android:gravity="left|right|center_vertical|center_horizontal|fill_horizontal|center" android:id="@android:id/progress">
+        <scale android:scaleWidth="100%">
+            <selector>
+                <item android:state_enabled="false" android:drawable="@android:color/transparent"/>
+                <item>
+                    <shape android:shape="rectangle">
+                        <corners android:radius="@dimen/size1dp"/>
+                        <size android:height="@dimen/size4dp"/>
+                        <gradient android:startColor="#f44336" android:endColor="#f44336" android:angle="0"/>
+                    </shape>
+                </item>
+            </selector>
+        </scale>
+    </item>
+</layer-list>
